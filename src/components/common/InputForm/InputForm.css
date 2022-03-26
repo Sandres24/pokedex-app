@@ -1,0 +1,71 @@
+.input-form {
+   background: #fff;
+   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+   width: 85%;
+   max-width: 662px;
+   height: 6.7vh;
+   border-radius: 7px;
+}
+
+.input-form-content {
+   height: 100%;
+   display: flex;
+   border-radius: 7px;
+}
+
+.input-input {
+   font-family: 'Roboto', sans-serif;
+   font-size: 16px;
+   padding: 0 1rem;
+   border: none;
+   outline: transparent;
+   flex-grow: 1;
+   border-radius: 1rem !important;
+}
+
+.input-input::placeholder {
+   font-size: 1.15rem;
+}
+
+.input-submit-button {
+   background: #d93f3f;
+   color: #fff;
+   font-family: 'Roboto', sans-serif;
+   min-width: 75px;
+   max-width: 150px;
+   height: 100%;
+   padding: 0 1rem;
+   border: none;
+   cursor: pointer;
+   border-radius: 0 7px 7px 0;
+   transition: all 0.75s ease;
+}
+
+.input-submit-button:hover {
+   background: #dd1a1a;
+   transition: all 0.75s ease;
+}
+
+.form-error-container {
+   position: relative;
+}
+
+.form-error-message {
+   color: #d93f3f;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+   .input-input {
+      font-size: 1.15rem;
+      padding: 0 1rem;
+      flex-grow: 1;
+   }
+
+   .input-submit-button {
+      font-size: 1.25rem;
+      width: 209px;
+      flex-grow: 0;
+   }
+}

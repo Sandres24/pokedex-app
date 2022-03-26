@@ -1,0 +1,62 @@
+.PokemonsPage {
+   padding: 1.5rem 1rem;
+}
+
+.wellcome {
+   font-family: 'Inter', sans-serif;
+   font-size: 16px;
+}
+
+.wellcome-name {
+   color: #fe1936;
+}
+
+.search-container {
+   /* background-color: blue; */
+   height: fit-content;
+   margin: 2rem 0;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+}
+
+.input-form-pokemon {
+   margin: 0 auto 1rem auto;
+   width: 100%;
+}
+
+.select-input-pokemon {
+   width: 100%;
+   margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+   .PokemonsPage {
+      padding: 2% 5%;
+   }
+
+   .wellcome {
+      font-size: 24px;
+   }
+
+   .search-container {
+      flex-flow: row nowrap;
+      justify-content: center;
+   }
+
+   .input-form-pokemon {
+      width: 60%;
+      max-width: none;
+      margin: 0 1rem 0 0;
+   }
+
+   .select-input-pokemon {
+      width: 40%;
+      margin: 0 0 0 1rem;
+   }
+
+   .select-input-pokemon {
+      width: 40%;
+      margin: 0 0 0 1rem;
+   }
+}

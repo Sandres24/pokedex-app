@@ -1,0 +1,51 @@
+.custom-btn.back-button {
+   position: absolute;
+   top: 1rem;
+   left: 2.5%;
+}
+
+.exit-button {
+   position: absolute;
+   top: 1rem;
+   right: 2.5%;
+}
+
+.main-layout-icon-pokedex-container {
+   width: 200px;
+   position: absolute;
+   top: 12vh;
+   transform: translateY(-75%);
+   left: 5%;
+}
+
+.main-layout-icon-pokedex {
+   width: 100%;
+}
+
+.main-layout-pokeball-container {
+   position: absolute;
+   top: 9%;
+   right: 5%;
+}
+
+.custom-btn.config-button {
+   background: red;
+   color: #fff;
+   font-size: 1.75rem;
+   padding: 0.75rem;
+   border-radius: 50%;
+   position: absolute;
+   bottom: 2%;
+   right: 4%;
+}
+
+@media only screen and (min-width: 768px) {
+   .main-layout-icon-pokedex-container {
+      width: 431px;
+      height: 76px;
+   }
+
+   .custom-btn.config-button {
+      right: 2%;
+   }
+}

@@ -1,0 +1,37 @@
+.pokeball {
+   width: fit-content;
+}
+
+.elipse3 {
+   background: url('../../../assets/svgs/elipse3.svg');
+}
+
+.elipse4 {
+   background: url('../../../assets/svgs/elipse4.svg');
+}
+
+.elipse3,
+.elipse4 {
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+   border-radius: 50%;
+}
+
+.elipse3 {
+   width: 8.5vw;
+   min-width: 75px;
+   height: 12vh;
+   min-height: 75px;
+   position: relative;
+}
+
+.elipse4 {
+   transform: translateY(2.5%);
+   width: 50%;
+   height: 50%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -45%);
+}
