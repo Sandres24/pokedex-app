@@ -157,7 +157,7 @@ const PokemonPage = () => {
                                        ></progress>
                                     </div>
                                  );
-                              return;
+                              return null;
                            })}
                         </div>
                      </div>
