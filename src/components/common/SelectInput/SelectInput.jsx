@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import './SelectInput.css';
+import SelectInputOptions from './SelectInputOptions';
 
-const SelectInput = ({ className }) => {
+const SelectInput = ({
+   className,
+   pokemonTypes,
+   defaultValue,
+   value,
+   changeValue,
+}) => {
    const [visible, setIsVisible] = useState(false);
 
    const handleClick = () => setIsVisible(!visible);
@@ -11,17 +18,22 @@ const SelectInput = ({ className }) => {
          className={`select-input ${
             visible ? 'select-input-active' : ''
          } ${className}`}
+         onClick={handleClick}
       >
-         <div className='select-input-header' onClick={handleClick}>
-            List by pokemon type...
-         </div>
+         <div className='select-input-header'>{value}</div>
          <i
             className={`down-arrow ${
                visible ? 'down-arrow-active' : ''
             } fa-solid fa-angle-down`}
-            onClick={handleClick}
          ></i>
-         {visible && <p className='drop-down'>List</p>}
+         {visible && (
+            <SelectInputOptions
+               pokemonTypes={pokemonTypes}
+               defaultValue={defaultValue}
+               changeValue={changeValue}
+               setIsVisible={setIsVisible}
+            />
+         )}
       </div>
    );
 };

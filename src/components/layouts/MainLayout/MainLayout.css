@@ -1,42 +1,68 @@
 .custom-btn.back-button {
-   position: absolute;
+   position: fixed;
    top: 1rem;
    left: 2.5%;
+   z-index: 210;
 }
 
 .exit-button {
-   position: absolute;
+   position: fixed;
    top: 1rem;
    right: 2.5%;
+   z-index: 210;
 }
 
 .main-layout-icon-pokedex-container {
    width: 200px;
-   position: absolute;
+   position: fixed;
    top: 12vh;
    transform: translateY(-75%);
    left: 5%;
+   z-index: 210;
 }
 
 .main-layout-icon-pokedex {
    width: 100%;
 }
 
+.main-layout-pokeball-bar-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 200;
+}
+
 .main-layout-pokeball-container {
-   position: absolute;
+   position: fixed;
    top: 9%;
    right: 5%;
+   z-index: 210;
 }
 
 .custom-btn.config-button {
    background: red;
-   color: #fff;
-   font-size: 1.75rem;
-   padding: 0.75rem;
+   padding: 0.35rem;
    border-radius: 50%;
-   position: absolute;
-   bottom: 2%;
-   right: 4%;
+   position: fixed;
+   bottom: 1rem;
+   right: 1rem;
+   z-index: 100;
+}
+
+.config-icon-container {
+   width: 2.5rem;
+   height: 2.5rem;
+   display: grid;
+   place-content: center;
+}
+
+.config-icon {
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   display: grid;
+   place-content: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -46,6 +72,7 @@
    }
 
    .custom-btn.config-button {
-      right: 2%;
+      right: 1.5rem;
+      bottom: 1.5rem;
    }
 }

@@ -6,6 +6,10 @@ import MainLayout from './layouts/MainLayout/MainLayout';
 import IconPokedex from './common/IconPokedex/IconPokedex';
 import CustomButton from './common/BackButton/CustomButton';
 import SelectInput from './common/SelectInput/SelectInput';
+import Card from './common/Card/Card';
+import PokemonCardInfo from './common/Card/PokemonCardInfo';
+import Pagination from './common/Pagination/Pagination';
+import Loader from './common/Loader/Loader';
 
 export {
    ProtectedRoutes,
@@ -16,4 +20,8 @@ export {
    IconPokedex,
    CustomButton,
    SelectInput,
+   Card,
+   PokemonCardInfo,
+   Pagination,
+   Loader,
 };

@@ -1,0 +1,26 @@
+.pagination-section {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+}
+
+.pagination-btn {
+   background: transparent;
+   width: 40px;
+   height: 40px;
+   margin: 0.25rem;
+   border: none;
+   cursor: pointer;
+}
+
+.pagination-btn:disabled,
+.prev-btn,
+.next-btn {
+   background: #dd1a1a;
+   color: #fff;
+   border-radius: 5px;
+}
+
+.pagination-btn:disabled {
+   cursor: default;
+}

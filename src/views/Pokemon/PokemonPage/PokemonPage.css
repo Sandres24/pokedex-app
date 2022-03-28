@@ -1,0 +1,351 @@
+.PokemonPage {
+   max-width: 1200px;
+   margin: auto;
+   padding: 8rem 1rem 1.5rem 1rem;
+}
+
+.loader-container {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+}
+
+.pokemon-info-container {
+   background: #fff;
+   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+   padding: 0.15rem;
+   border-radius: 5px;
+}
+
+.pokemon-background-img {
+   width: 100%;
+   height: 18.5vh;
+   border-radius: 5px 5px 0 0;
+   position: relative;
+}
+
+.pokemon-page-img-container {
+   width: 100%;
+   height: 31vh;
+   max-width: 341px;
+   position: absolute;
+   top: -80%;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.pokemon-page-img {
+   width: 100%;
+   height: 100%;
+}
+
+.pokemon-description {
+   width: 85%;
+   margin: 2rem auto 2rem auto;
+}
+
+.pokemon-title {
+   font-family: 'Roboto', sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   text-align: center;
+}
+
+.pokemon-id {
+   width: fit-content;
+   padding: 0 0.5rem;
+   display: grid;
+   place-content: center;
+   margin: auto;
+   border: 1px solid #d3d3d3;
+   border-radius: 2px;
+}
+
+.pokemon-description-name {
+   margin: 1rem 0;
+   display: grid;
+   grid-template-rows: 1fr;
+   grid-template-columns: 2fr 1.5fr 2fr;
+   align-items: center;
+   grid-gap: 0.5rem;
+}
+
+.pokemon-hr {
+   background: #9f9f9f;
+   height: 1px;
+}
+
+.pokemon-weight-height {
+   text-align: center;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+}
+
+.weight-height-stat {
+   margin: 0 1rem;
+}
+
+.pokemon-weight-height-title {
+   color: #0f0f2d;
+   font-family: 'Roboto', sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   margin: 0 0 0.25rem 0;
+}
+
+.pokemon-type-skills {
+   text-align: center;
+   margin: 1rem 0 0 0;
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   justify-items: center;
+}
+
+.pokemon-weight-height-stat {
+   color: #0f0f2d;
+   font-family: 'Roboto', sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+}
+
+.pokemon-type-skills-title {
+   color: #302f2f;
+   font-family: 'Roboto', sans-serif;
+   font-size: 18px;
+   font-weight: 500;
+   margin: 1rem 0;
+}
+
+.pokemon-type-skills {
+   display: grid;
+   grid-template-rows: 1fr;
+   grid-template-columns: 1fr;
+   justify-items: center;
+   grid-gap: 1rem;
+}
+
+.pokemon-types {
+   display: grid;
+   grid-template-rows: 1fr;
+   grid-template-columns: 1fr;
+   grid-gap: 0.5rem;
+}
+
+.pokemon-description-types {
+   color: #fff;
+   font-family: 'Roboto', sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   width: 210px;
+   padding: 0.5rem 0;
+   border-radius: 2px;
+}
+
+.pokemon-skills {
+   display: grid;
+   grid-template-rows: 1fr;
+   grid-template-columns: 1fr;
+   grid-gap: 0.5rem;
+}
+
+.pokemon-description-skills {
+   background: transparent;
+   color: #302f2f;
+   font-family: 'Roboto', sans-serif;
+   font-size: 20px;
+   font-weight: 500;
+   width: 210px;
+   padding: 0.5rem 0;
+   border: 1px solid #d3d3d3;
+   border-radius: 2px;
+}
+
+.pokemon-stats {
+   margin: 5rem 0 0 0;
+}
+
+.pokemon-stats-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.pokemon-stats-title {
+   color: #302f2f;
+   font-family: 'Roboto', sans-serif;
+   font-size: 30px;
+   font-weight: 500;
+   margin: 0 1rem 0 0;
+}
+
+.group232-container {
+   display: flex;
+}
+
+.group232 {
+   width: 100%;
+}
+
+.stat-header {
+   color: #302f2f;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 600;
+   margin: 0 0 0.25rem 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+}
+
+.stat-header-title {
+   font-size: 1.5rem;
+}
+
+.stat-header-subtitle {
+   font-size: 1.1rem;
+}
+
+.pokemon-stats-bars {
+   margin: 2rem 0 0 0;
+}
+
+.bar-stat {
+   margin: 2rem 0;
+}
+
+.pokemon-stats-bar {
+   -webkit-appearance: none;
+   width: 100%;
+   height: 34px;
+}
+
+::-webkit-progress-bar {
+   background: #f7f7f7;
+   border-radius: 4px;
+}
+
+::-webkit-progress-value {
+   background: linear-gradient(90deg, #fcd676 -2.25%, #e6901e 133.18%);
+   border-radius: 4px;
+}
+
+.pokemon-movements-section {
+   margin: 2rem 0 0 0;
+}
+
+.pokemon-movements-info {
+   width: 85%;
+   margin: 2rem auto 2rem auto;
+}
+
+.movements-wrapper {
+   margin: 1rem 0 0 0;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.pokemon-movements {
+   background: #e5e5e5;
+   color: #302f2f;
+   font-family: 'Roboto', sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   display: inline-block;
+   margin: 1rem;
+   padding: 0.75rem 1.25rem;
+   border-radius: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+   .PokemonPage {
+      padding: 9rem 1rem 1.5rem 1rem;
+      width: 90%;
+   }
+
+   .pokemon-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 40px;
+      font-weight: 500;
+      text-align: center;
+   }
+
+   .pokemon-id {
+      display: grid;
+      place-content: center;
+      margin: auto;
+      border: 1px solid #d3d3d3;
+   }
+
+   .pokemon-weight-height-stat {
+      margin: 0 2rem;
+   }
+
+   .pokemon-weight-height-stat {
+      font-size: 25px;
+   }
+
+   .pokemon-type-skills-title {
+      font-size: 30px;
+      margin: 0 0 0.5rem 0;
+   }
+
+   .pokemon-stats-title {
+      font-size: 43px;
+   }
+
+   .pokemon-movements-section {
+      margin: 3rem 0 0 0;
+   }
+
+   .pokemon-movements {
+      font-size: 24px;
+   }
+}
+
+@media only screen and (min-width: 1100px) {
+   .pokemon-type-skills {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      grid-gap: 1rem;
+   }
+
+   .pokemon-types {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.5rem;
+   }
+
+   .pokemon-description-types {
+      color: #302f2f;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      width: 190px;
+      padding: 0.5rem 0;
+      border: 1px solid #d3d3d3;
+      border-radius: 2px;
+   }
+
+   .pokemon-skills {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.5rem;
+   }
+
+   .pokemon-description-skills {
+      color: #302f2f;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      width: 190px;
+      padding: 0.5rem 0;
+      border: 1px solid #d3d3d3;
+      border-radius: 2px;
+   }
+}

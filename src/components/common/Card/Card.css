@@ -1,0 +1,35 @@
+.card {
+   width: fit-content;
+   height: fit-content;
+   padding: 0.7rem;
+   border-radius: 1rem;
+   display: grid;
+   place-content: center;
+   cursor: pointer;
+   transition: transform 0.25s ease;
+}
+
+.card:hover {
+   transform: scale(1.025);
+   transition: transform 0.25s ease;
+}
+
+.card-content {
+   border-radius: 0.25rem;
+   position: relative;
+}
+
+.card-header {
+   width: 261px;
+   height: 128px;
+   border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.card-body {
+   background: #fff;
+   text-align: center;
+   width: 261px;
+   height: 255px;
+   border-radius: 0 0 0.25rem 0.25rem;
+   padding: 55px 0 0 0;
+}

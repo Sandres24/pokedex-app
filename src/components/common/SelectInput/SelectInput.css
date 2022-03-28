@@ -1,6 +1,7 @@
 .select-input {
    background: #fff;
    font-size: 16px;
+   max-width: 662px;
    height: 6.7vh;
    border-radius: 7px;
    border: none;
@@ -19,7 +20,7 @@
 }
 
 .select-input-header {
-   width: 100% !important;
+   width: 100%;
    padding: 0.5rem;
 }
 
@@ -40,7 +41,7 @@
 }
 
 .down-arrow-active {
-   color: #dd1a1a;
+   color: #d93f3f;
    transform: translate(50%, -50%) rotate(0deg);
    top: 125%;
    right: 50%;
@@ -52,17 +53,40 @@
    background-color: #fff;
    font-size: 16px;
    width: 100%;
-   height: 100px;
-   padding: 0.5rem;
+   /* height: fit-content; */
+   height: 300px;
+   /* border-left: 1px solid #000;
+   border-right: 1px solid #000;
+   border-bottom: 1px solid #000; */
+   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
    border-radius: 0 0 7px 7px;
+   overflow-y: scroll;
    position: absolute;
    top: 150%;
    animation-name: drop-down-show;
    animation-duration: 1s;
    animation-timing-function: ease;
    cursor: default;
-   /* animation-name: drop-down-hide;
-   animation-duration: 1.5s; */
+}
+
+.drop-down::-webkit-scrollbar {
+   width: 5px;
+}
+
+.drop-down::-webkit-scrollbar-thumb {
+   background: #d93f3f;
+   border-radius: 5rem;
+}
+
+.drop-down-option {
+   padding: 1rem 0.5rem;
+   cursor: pointer;
+   transition: background 0.1s ease;
+}
+
+.drop-down-option:hover {
+   background: #ed8f8f;
+   transition: background 0.1s ease;
 }
 
 @keyframes drop-down-show {
@@ -71,19 +95,5 @@
    }
    to {
       opacity: 1;
-   }
-}
-
-@keyframes drop-down-hide {
-   from {
-      opacity: 1;
-   }
-   to {
-      opacity: 0;
-   }
-}
-
-@media only screen and (min-width: 768px) {
-   .select-input {
    }
 }

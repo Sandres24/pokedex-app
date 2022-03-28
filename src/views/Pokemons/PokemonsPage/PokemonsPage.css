@@ -1,4 +1,6 @@
 .PokemonsPage {
+   max-width: 1200px;
+   margin: auto;
    padding: 1.5rem 1rem;
 }
 
@@ -12,12 +14,13 @@
 }
 
 .search-container {
-   /* background-color: blue; */
    height: fit-content;
    margin: 2rem 0;
    display: flex;
    flex-flow: column nowrap;
    align-items: center;
+   position: relative;
+   z-index: 110;
 }
 
 .input-form-pokemon {
@@ -25,14 +28,29 @@
    width: 100%;
 }
 
+.input-input::placeholder {
+   font-size: 0.9rem;
+}
+
 .select-input-pokemon {
    width: 100%;
    margin: auto;
 }
 
+.cards-wrapper {
+   margin: 3rem 0 1rem 0;
+   display: grid;
+   grid-template-rows: 1fr;
+   grid-template-columns: repeat(auto-fit, 285px);
+   grid-gap: 1rem;
+   justify-content: center;
+   justify-items: center;
+}
+
 @media only screen and (min-width: 768px) {
    .PokemonsPage {
-      padding: 2% 5%;
+      padding: 2% 0;
+      width: 90%;
    }
 
    .wellcome {
@@ -48,6 +66,10 @@
       width: 60%;
       max-width: none;
       margin: 0 1rem 0 0;
+   }
+
+   .input-input::placeholder {
+      font-size: 1.15rem;
    }
 
    .select-input-pokemon {

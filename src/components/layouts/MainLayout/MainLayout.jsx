@@ -1,6 +1,6 @@
 import React from 'react';
 import './MainLayout.css';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import Pokeball from '../../common/Pokeball/Pokeball';
 import PokeballBar from '../../common/PokeballBar/PokeballBar';
 import IconPokedex from '../../common/IconPokedex/IconPokedex';
@@ -9,11 +9,9 @@ import { useDispatch } from 'react-redux';
 import { exit } from '../../../redux/actions';
 
 const MainLayout = () => {
-   const navigate = useNavigate();
    const dispatch = useDispatch();
 
    const closeSession = () => dispatch(exit(null));
-   const goToConfig = () => navigate('/config');
 
    return (
       <>
@@ -36,12 +34,6 @@ const MainLayout = () => {
             <Pokeball />
          </div>
          <Outlet />
-         <CustomButton
-            className='custom-btn config-button'
-            handleClick={goToConfig}
-         >
-            <i className='fa-solid fa-wrench'></i>
-         </CustomButton>
       </>
    );
 };
