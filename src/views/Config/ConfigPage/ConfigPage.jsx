@@ -3,7 +3,7 @@ import './ConfigPage.css';
 import { useNavigate } from 'react-router-dom';
 import { CustomButton, SelectInput } from '../../../components';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeElementsPerPage, changeTheme } from '../../../redux/actions';
+import { changeTheme } from '../../../redux/actions';
 
 const list = [{ name: 4 }, { name: 8 }, { name: 12 }, { name: 16 }];
 
