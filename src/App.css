@@ -28,12 +28,12 @@ a {
 
 .light {
    background: #e5e5e5;
-   color: #000;
+   transition: all 0.75s ease;
 }
 
 .dark {
    background: #2a2a2a;
-   color: #fff;
+   transition: all 0.75s ease;
 }
 
 .pokeball-dark-bar {

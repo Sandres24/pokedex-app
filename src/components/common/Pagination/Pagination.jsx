@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { getOffset } from '../../../utils';
 import './Pagination.css';
 
@@ -8,6 +9,8 @@ const Pagination = ({
    setPaginationInfo,
    totalPages,
 }) => {
+   const theme = useSelector((state) => state.theme);
+
    const handleClick = (e) => {
       setPaginationInfo({
          ...paginationInfo,
@@ -58,6 +61,7 @@ const Pagination = ({
          {range.map((page) => (
             <button
                key={page}
+               style={{ color: theme === 'light' ? '#000' : '#fff' }}
                className='pagination-btn'
                type='button'
                onClick={handleClick}

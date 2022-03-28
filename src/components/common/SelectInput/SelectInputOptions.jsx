@@ -1,19 +1,28 @@
 import React from 'react';
+import { changeElementsPerPage } from '../../../redux/actions';
 import { capitalLetter } from '../../../utils';
 
 const SelectInputOptions = ({
-   pokemonTypes,
+   list,
    defaultValue,
    changeValue,
    setIsVisible,
 }) => {
    const handleChangeToDefaultValue = () => {
-      changeValue('');
+      if (changeValue.setPokemonTypeFilter)
+         changeValue.setPokemonTypeFilter('');
+      if (changeValue.dispatch)
+         changeValue.dispatch(changeElementsPerPage(defaultValue));
       setIsVisible(false);
    };
 
    const handleChangeValue = (e) => {
-      changeValue(e.target.textContent);
+      if (changeValue.setPokemonTypeFilter)
+         changeValue.setPokemonTypeFilter(e.target.textContent);
+      if (changeValue.dispatch)
+         changeValue.dispatch(
+            changeElementsPerPage(Number(e.target.textContent))
+         );
       setIsVisible(false);
    };
 
@@ -26,13 +35,13 @@ const SelectInputOptions = ({
          >
             {defaultValue}
          </p>
-         {pokemonTypes.map((pokemonType) => (
+         {list.map((item) => (
             <p
-               key={pokemonType.name}
+               key={item.name}
                className='drop-down-option'
                onClick={handleChangeValue}
             >
-               {capitalLetter(pokemonType.name)}
+               {capitalLetter(item.name)}
             </p>
          ))}
       </div>

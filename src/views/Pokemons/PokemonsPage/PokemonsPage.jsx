@@ -20,13 +20,14 @@ import {
    toLowerCase,
 } from '../../../utils';
 import { Link, useNavigate } from 'react-router-dom';
-import { configIcon } from '../../../assets';
+import { configIcon, noResults } from '../../../assets';
 import useFetch from '../../../hooks/useFetch';
 
 const defaultPokemonTypeFilter = '';
 
 const PokemonsPage = () => {
    const username = useSelector((state) => state.username);
+   const theme = useSelector((state) => state.theme);
    const defaultElementsPerPage = useSelector((state) => state.elementsPerPage);
    const navigate = useNavigate();
 
@@ -69,11 +70,6 @@ const PokemonsPage = () => {
 
    const goToConfig = () => navigate('/config');
 
-   console.log(pokemons);
-   console.log('ALL', allPokemons);
-   console.log(paginationInfo);
-   console.log(totalPages);
-
    return (
       <div className='PokemonsPage'>
          <CustomButton
@@ -85,17 +81,20 @@ const PokemonsPage = () => {
             </figure>
          </CustomButton>
          <h2 className='wellcome'>
-            <span className='wellcome-name'>Wellcome {username},</span> here you
-            would find your favorite pokemon.
+            <span className='wellcome-name'>Wellcome {username},</span>
+            <span style={{ color: theme === 'light' ? '#000' : '#fff' }}>
+               {' '}
+               here you would find your favorite pokemon.
+            </span>
          </h2>
          <div className='search-container'>
             <InputForm {...pokemonValidation()} />
             <SelectInput
                className='select-input-pokemon'
-               pokemonTypes={pokemonTypes?.data?.results || []}
+               list={pokemonTypes?.data?.results || []}
                defaultValue={defaultPokemonTypeFilter || 'All pokemons'}
                value={pokemonTypeFilter || 'All pokemons'}
-               changeValue={setPokemonTypeFilter}
+               changeValue={{ setPokemonTypeFilter }}
             />
          </div>
          <div className='cards-wrapper'>
@@ -158,6 +157,22 @@ const PokemonsPage = () => {
                         </Card>
                      </Link>
                   ))}
+            {pokemons.data?.pokemon?.length === 0 && (
+               <div className='no-results-container'>
+                  <p
+                     className='pokemons-no-results'
+                     style={{ color: theme === 'light' ? '#000' : '#fff' }}
+                  >
+                     Sorry, there are no pokemons with this type of search!
+                  </p>
+                  <img
+                     className='no-results-img'
+                     src={noResults}
+                     alt='No results'
+                  />
+               </div>
+            )}
+            {console.log(pokemons.data)}
          </div>
          {pokemons.data && (
             <Pagination

@@ -14,8 +14,6 @@ const PokemonPage = () => {
 
    const { fetchState: pokemon } = useFetch(getURL(getByPokemon(id)));
 
-   console.log(pokemon);
-
    const backTo = () => navigate(-1);
    const goToConfig = () => navigate('/config');
 

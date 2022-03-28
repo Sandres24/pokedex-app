@@ -2,13 +2,7 @@ import React, { useState } from 'react';
 import './SelectInput.css';
 import SelectInputOptions from './SelectInputOptions';
 
-const SelectInput = ({
-   className,
-   pokemonTypes,
-   defaultValue,
-   value,
-   changeValue,
-}) => {
+const SelectInput = ({ className, list, defaultValue, value, changeValue }) => {
    const [visible, setIsVisible] = useState(false);
 
    const handleClick = () => setIsVisible(!visible);
@@ -28,7 +22,7 @@ const SelectInput = ({
          ></i>
          {visible && (
             <SelectInputOptions
-               pokemonTypes={pokemonTypes}
+               list={list}
                defaultValue={defaultValue}
                changeValue={changeValue}
                setIsVisible={setIsVisible}

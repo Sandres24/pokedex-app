@@ -11,6 +11,16 @@ export const rootReducer = (state, action) => {
          return {
             ...action.payload,
          };
+      case actions.changeTheme:
+         return {
+            ...state,
+            theme: action.payload,
+         };
+      case actions.changeElementsPerPage:
+         return {
+            ...state,
+            elementsPerPage: action.payload,
+         };
       default:
          return state;
    }

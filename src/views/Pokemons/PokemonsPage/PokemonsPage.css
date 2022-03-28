@@ -42,9 +42,26 @@
    display: grid;
    grid-template-rows: 1fr;
    grid-template-columns: repeat(auto-fit, 285px);
-   grid-gap: 1rem;
+   grid-gap: 2rem 1rem;
    justify-content: center;
    justify-items: center;
+}
+
+.no-results-container {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+}
+
+.pokemons-no-results {
+   font-family: 'Robot', sans-serif;
+   font-size: 25px;
+   text-align: center;
+   width: 100%;
+}
+
+.no-results-img {
+   width: 200px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -80,5 +97,9 @@
    .select-input-pokemon {
       width: 40%;
       margin: 0 0 0 1rem;
+   }
+
+   .no-results-container {
+      width: 150%;
    }
 }
