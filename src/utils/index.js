@@ -15,6 +15,7 @@ import {
    getTotalPages,
    getPaginationRange,
 } from './helpers/pagination/pagination';
+import { getColorsByType } from './helpers/colors/getColors.helpers';
 
 export {
    baseURLS,
@@ -30,4 +31,5 @@ export {
    getTotalPages,
    getPaginationRange,
    getByPokemon,
+   getColorsByType,
 };

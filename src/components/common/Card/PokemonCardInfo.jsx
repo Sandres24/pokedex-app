@@ -1,11 +1,12 @@
 import React from 'react';
 import useFetch from '../../../hooks/useFetch';
-import { capitalLetter, typesFormat } from '../../../utils';
+import { capitalLetter, getColorsByType, typesFormat } from '../../../utils';
 import './PokemonCardInfo.css';
 import { imageNotAvailable } from '../../../assets';
 
-const PokemonCardInfo = ({ textColor, url }) => {
+const PokemonCardInfo = ({ url }) => {
    const { fetchState: pokemon } = useFetch(url);
+   const color = getColorsByType(pokemon.data?.types?.[0].type?.name);
 
    return (
       <>
@@ -23,7 +24,10 @@ const PokemonCardInfo = ({ textColor, url }) => {
                   />
                </figure>
                <hgroup>
-                  <h2 className='pokemon-name' style={{ color: textColor }}>
+                  <h2
+                     className='pokemon-name'
+                     style={{ color: color.textColor }}
+                  >
                      {capitalLetter(pokemon.data.name)}
                   </h2>
                   <h3 className='pokemon-type'>
@@ -43,7 +47,7 @@ const PokemonCardInfo = ({ textColor, url }) => {
                      </h4>
                      <p
                         className='pokemon-stat-info'
-                        style={{ color: textColor }}
+                        style={{ color: color.textColor }}
                      >
                         {pokemon.data.stats[0].base_stat}
                      </p>
@@ -54,7 +58,7 @@ const PokemonCardInfo = ({ textColor, url }) => {
                      </h4>
                      <p
                         className='pokemon-stat-info'
-                        style={{ color: textColor }}
+                        style={{ color: color.textColor }}
                      >
                         {pokemon.data.stats[1].base_stat}
                      </p>
@@ -65,7 +69,7 @@ const PokemonCardInfo = ({ textColor, url }) => {
                      </h4>
                      <p
                         className='pokemon-stat-info'
-                        style={{ color: textColor }}
+                        style={{ color: color.textColor }}
                      >
                         {pokemon.data.stats[2].base_stat}
                      </p>
@@ -76,7 +80,7 @@ const PokemonCardInfo = ({ textColor, url }) => {
                      </h4>
                      <p
                         className='pokemon-stat-info'
-                        style={{ color: textColor }}
+                        style={{ color: color.textColor }}
                      >
                         {pokemon.data.stats[5].base_stat}
                      </p>

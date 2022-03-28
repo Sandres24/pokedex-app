@@ -113,18 +113,8 @@ const PokemonsPage = () => {
                            .match(/(\/)\d+(\/)$/)[0]
                            .replace('/', '', 'g')}`}
                      >
-                        <Card
-                           className='card-pokemon'
-                           backgrounds={{
-                              card: 'linear-gradient(#b1dbbc, #c3dea3)',
-                              cardHeader:
-                                 'linear-gradient(#7ec6c5, #abdac6, #cae099)',
-                           }}
-                        >
-                           <PokemonCardInfo
-                              textColor='#416460'
-                              url={pokemon.url}
-                           />
+                        <Card className='card-pokemon' url={pokemon.url}>
+                           <PokemonCardInfo url={pokemon.url} />
                         </Card>
                      </Link>
                   ))}
@@ -144,16 +134,9 @@ const PokemonsPage = () => {
                      >
                         <Card
                            className='card-pokemon'
-                           backgrounds={{
-                              card: 'linear-gradient(#b1dbbc, #c3dea3)',
-                              cardHeader:
-                                 'linear-gradient(#7ec6c5, #abdac6, #cae099)',
-                           }}
+                           url={pokemon?.pokemon?.url}
                         >
-                           <PokemonCardInfo
-                              textColor='#416460'
-                              url={pokemon.pokemon.url}
-                           />
+                           <PokemonCardInfo url={pokemon?.pokemon?.url} />
                         </Card>
                      </Link>
                   ))}
@@ -172,7 +155,6 @@ const PokemonsPage = () => {
                   />
                </div>
             )}
-            {console.log(pokemons.data)}
          </div>
          {pokemons.data && (
             <Pagination

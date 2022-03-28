@@ -60,7 +60,7 @@
    position: absolute;
    top: 150%;
    animation-name: drop-down-show;
-   animation-duration: 1s;
+   animation-duration: 0.75s;
    animation-timing-function: ease;
    cursor: default;
 }
