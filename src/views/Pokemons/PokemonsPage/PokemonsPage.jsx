@@ -88,7 +88,11 @@ const PokemonsPage = () => {
             </span>
          </h2>
          <div className='search-container'>
-            <InputForm {...pokemonValidation()} />
+            <InputForm
+               {...pokemonValidation(
+                  allPokemons.data ? allPokemons.data : null
+               )}
+            />
             <SelectInput
                className='select-input-pokemon'
                list={pokemonTypes?.data?.results || []}

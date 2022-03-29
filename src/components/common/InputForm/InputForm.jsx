@@ -11,15 +11,18 @@ const InputForm = ({
    initialValues,
    validate,
    onSubmit,
+   data,
 }) => {
    const dispatch = useDispatch();
    const navigate = useNavigate();
 
+   console.log(data);
+
    return (
       <Formik
          initialValues={initialValues}
-         validate={(values) => validate(values)}
-         onSubmit={(values) => onSubmit(values, dispatch, navigate)}
+         validate={(values) => validate(values, data)}
+         onSubmit={(values) => onSubmit(values, dispatch, navigate, data)}
       >
          {({ errors }) => (
             <>
@@ -40,6 +43,15 @@ const InputForm = ({
                         {button}
                      </button>
                   </div>
+
+                  <ErrorMessage
+                     name={name}
+                     component={() => (
+                        <small className='form-error-message'>
+                           {errors.username || errors.pokemon}
+                        </small>
+                     )}
+                  />
 
                   <ErrorMessage
                      name={name}
